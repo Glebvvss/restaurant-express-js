@@ -16,11 +16,11 @@ npm run serve
 #allowed server urls
 1. GET    http://localhost:4500/tables         - get list of tables in restaurant
 2. GET    http://localhost:4500/reserves/today - get list of reserved tables info today
-2. POST   http://localhost:4500/reserves       - create new reserve with json body like 
+3. POST   http://localhost:4500/reserves       - create new reserve with json body like 
     {
         "client_name":  "name", 
         "date":         "2020-12-12", 
         "table_number": "2"
     }
 
-2. DELETE http://localhost:4500/reserves/{id}  - delete single reserve by id
+4. DELETE http://localhost:4500/reserves/{id}  - delete single reserve by id
