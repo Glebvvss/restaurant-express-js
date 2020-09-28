@@ -1,16 +1,20 @@
 const { connect } = require('../../core/db.js')
 const { successJsonMsgOf, failedJsonMsgWith } = require('../../core/messages.js');
 
+const isNoClientName  = clientName => clientName.match(/^[a-z A-Z]{2,}$/) === -1
+const isNoDate        = date       => date.match(/^20[0-9]{2}\-[0-9]{2}\-[0-9]{2}$/) === -1
+const isNoTableNumber = number     => number.match(/^\d+$/) === -1
+
 const incorrectReserveFormat = reserve => {
-  if (!reserve.client_name) {
+  if (isNoClientName(reserve.client_name)) {
     return true
   }
 
-  if (!reserve.date || reserve.date.match(/^20[0-9]{2}\-[0-9]{2}\-[0-9]{2}$/) === -1) {
+  if (isNoDate(reserve.date)) {
     return true
   }
 
-  if (!reserve.table_number) {
+  if (isNoTableNumber(reserve.table_number)) {
     return true
   }
 
