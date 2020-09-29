@@ -1,17 +1,13 @@
 Installation:
 
-#clone repository
-git clone https://github.com/Glebvvss/restaurant-express-js.git
+git clone https://github.com/Glebvvss/restaurant-express-js.git #clone repository
 
-#move to cloned project dir
-cd restaurant-express-js 
+cd restaurant-express-js    #move to cloned project dir
 
-#setup default migrations (database stores in restaurant.db file)
-#if you need to restart database you should drop restaurant.db file and call below command one more time
-npm run migrate 
+npm run migrate             #setup default migrations (database stores in restaurant.db file)
+                            #if you need to restart database you should drop restaurant.db file and call below command one more time
 
-#start server on http://localhost:4500
-npm run serve
+npm run serve               #start server on http://localhost:4500
 
 #allowed server urls
 1. GET    http://localhost:4500/tables         - get list of tables in restaurant
