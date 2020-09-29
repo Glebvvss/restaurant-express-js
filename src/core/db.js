@@ -3,4 +3,6 @@ const dbConfig = require('../config/db.js')
 
 const connect = async () => await sqlite.open(dbConfig.dbname);
 
-module.exports = { connect }
+const migrate = connect => name => require(`../migrations/${name}.js`)(connect)
+
+module.exports = { connect, migrate }
