@@ -1,7 +1,7 @@
 const app        = require('express')()
 const cors       = require('cors')
 const bodyParser = require('body-parser');
-const headers    = require('./src/middleware/headers.js')
+const headers    = require('./src/core/middleware/headers.js')
 const routes     = require('./src/routes.js')
 const port       = 4500
 
