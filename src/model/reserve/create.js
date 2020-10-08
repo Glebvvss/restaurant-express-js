@@ -4,7 +4,6 @@ const { reserveExists }       = require('./find.js')
 const { tableByNumberExists } = require('../table/find.js')
 
 const isNoCorrectReserve = reserve => ! isCorrectReserve(reserve)
-
 const tableNoExists      = async tableNumber => ! tableByNumberExists(tableNumber)
 
 module.exports = async reserve => {
