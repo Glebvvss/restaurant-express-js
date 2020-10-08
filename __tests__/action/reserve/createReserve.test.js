@@ -17,7 +17,6 @@ describe('createReserve action test', () => {
 	beforeEach(setup)
 
 	test('success', async () => {
-		return
 		const stubRequest = {
 			body: {
 				date: '2020-09-09',
