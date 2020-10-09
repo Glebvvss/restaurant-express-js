@@ -1,8 +1,7 @@
 const { successJsonMsgOf, failedJsonMsgWith } = require('../../core/messages.js');
 const createReserveFrom                       = require('../../model/reserve/create.js');
 
-const createdReserveId         = async data => (await createReserveFrom(data)).lastID
-const createdReserveResponseBy = async data => ({ id: await createdReserveId(data) })
+const createdReserveResponseBy = async data => ({ id: (await createReserveFrom(data)).lastID })
 
 module.exports = async (request, response) => {
   try {
